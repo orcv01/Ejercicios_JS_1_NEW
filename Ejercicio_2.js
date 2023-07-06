@@ -10,3 +10,17 @@ const foodSchedule = [
   { name: "Rice", isVegan: true },
   { name: "Pasta", isVegan: true },
 ];
+
+for (const food in foodSchedule) {
+  if (foodSchedule.hasOwnProperty.call(foodSchedule, food)) {
+    const element = foodSchedule[food];
+    let valor = element.isVegan;
+    let nombre = element.name;
+
+    if (valor) {
+      console.log("Es vegetal " + nombre);
+    } else {
+      console.log("No es vegetal " + nombre);
+    }
+  }
+}
